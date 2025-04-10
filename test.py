@@ -16,26 +16,7 @@ backends = [
   'yunet',
 ]
 
-def get_available_cameras():
-      available_cameras = []
-
-      for i in range(5):
-            cap = cv2.VideoCapture(1)
-
-            if cap.isOpened():
-                    available_cameras.append(i)
-                    cap.release()
-      return available_cameras
-
-
-cameras = get_available_cameras()
-if cameras:
-      print("Available Cameras:", cameras)
-else:
-      print("No Cameras Found")
-
-
-while False:
+while True:
         i = 0
         start_time = datetime.datetime.now()
 
